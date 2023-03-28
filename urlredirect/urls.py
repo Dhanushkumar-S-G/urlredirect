@@ -32,5 +32,5 @@ def unsubscribe_redirect_func(request,email):
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('get_image/<int:id>/',redirect_func),
-    path('unsubscribe_mail/<str:email>',unsubscribe_redirect_func)
+    path('unsubscribe_mail/<str:email>/',unsubscribe_redirect_func)
 ]
