@@ -23,8 +23,14 @@ def redirect_func(request,id):
     print(response )
     return HttpResponse('ok')
 
+def unsubscribe_redirect_func(request,email):
+    response = requests.get(f"https://afca-125-17-180-42.in.ngrok.io/unsubscribe_mail/{email}")
+    print(response )
+    return HttpResponse('ok')
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('get_image/<int:id>/',redirect_func)
+    path('get_image/<int:id>/',redirect_func),
+    path('unsubscribe_mail/<str:email>',unsubscribe_redirect_func)
 ]
