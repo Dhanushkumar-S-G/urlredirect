@@ -19,12 +19,12 @@ import requests
 from django.http import HttpResponse
 
 def redirect_func(request,id):
-    response = requests.get(f"https://4db7-125-17-181-200.in.ngrok.io/get_image/{id}")
+    response = requests.get(f"https://8521-125-17-181-200.in.ngrok.io/get_image/{id}")
     print(response )
     return HttpResponse('ok')
 
 def unsubscribe_redirect_func(request,email):
-    response = requests.get(f"https://4db7-125-17-181-200.in.ngrok.io/unsubscribe_mail/{email}")
+    response = requests.get(f"https://8521-125-17-181-200.in.ngrok.io/unsubscribe_mail/{email}")
     print(response )
     return HttpResponse('ok')
 
